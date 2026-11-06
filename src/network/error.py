@@ -1,0 +1,40 @@
+from language import getLan
+
+# ошибки регестрации
+class RegistrationUsernameError(Exception):
+    def __init__(self):
+        # заянят юзернейм
+        super().__init__(getLan("error", "RegistrationUsernameError"))
+
+class RegistrationEmailError(Exception):
+    def __init__(self):
+        # занята почта
+        super().__init__(getLan("error", "RegistrationEmailError"))
+
+class RegistrationInvalidEmail(Exception):
+    def __init__(self):
+        # Не верный формат почты
+        super().__init__(getLan("error", "RegistrationInvalidEmail"))
+
+class RegistrationError(Exception):
+    def __init__(self):
+        # просто неизвесная ошибка
+        super().__init__(getLan("error", "RegistrationError"))
+
+# ошибки входа
+class EntranceInvalidError(Exception):
+    def __init__(self):
+        super().__init__(getLan("error", "EntranceInvalidError"))
+
+class EntranceVerifiedError(Exception):
+    def __init__(self):
+        super().__init__(getLan("error", "EntranceVerifiedError"))
+
+class EntranceError(Exception):
+    def __init__(self):
+        super().__init__(getLan("error", "EntranceError"))
+
+# ошибка отправкии сообщений
+class SendMessageError(Exception):
+    def __init__(self):
+        super().__init__()
